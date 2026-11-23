@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez notre gourde isotherme en acier inoxydable recyclé. Livraison rapide en 48h.">
+    <title>Gourde Isotherme Nomad 750ml — Nomad Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="header__logo">
+            <img src="img/logo.png" alt="Nomad Studio">
+        </a>
+        <nav class="header__nav" aria-label="Navigation principale">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">La marque</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="cart-toggle" class="header__cart-btn">
+            Panier (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <main class="product">
+        <!-- Colonne gauche : Galerie -->
+        <section class="product__gallery" aria-label="Galerie photos du produit">
+            <div class="product__main-image">
+                <img id="main-product-img" src="img/product/bottle.webp" alt="Gourde isotherme Nomad vue principale">
+            </div>
+            <div class="product__thumbnails">
+                <button type="button" class="thumb-btn active"><img src="img/product/bouchon.webp" alt=""></button>
+                <button type="button" class="thumb-btn"><img src="img/product/bouchon-fermer-bottle.webp" alt=""></button>
+                <button type="button" class="thumb-btn"><img src="img/product/bottle-espace.webp" alt=""></button>
+            </div>
+        </section>
+
+        <!-- Colonne droite : Infos & Achat -->
+        <section class="product__info">
+            <p class="product__rating">★★★★★ 4,8/5 (124 avis vérifiés)</p>
+            <h1 class="product__title">Gourde Isotherme Nomad — 750ml</h1>
+            <p class="product__price" id="product-price" data-price="39">39,00 €</p>
+            <p class="product__description">
+                Maintient vos boissons fraîches pendant 24h et chaudes pendant 12h. Acier inoxydable recyclé sans BPA.
+            </p>
+
+            <!-- Variantes -->
+            <div class="product__variants">
+                <p class="label">Couleur : <strong id="selected-variant">Noir Mat</strong></p>
+                <div class="variant-list">
+                    <button type="button" class="variant-btn active" data-variant="Noir Mat" data-price="39">Noir Mat</button>
+                    <button type="button" class="variant-btn" data-variant="Vert Sauge" data-price="39">Vert Sauge</button>
+                    <button type="button" class="variant-btn" data-variant="Édition Limitée Cuivre" data-price="45">Édition Cuivre (+6€)</button>
+                </div>
+            </div>
+
+            <!-- Quantité & Ajout panier -->
+            <div class="product__actions">
+                <div class="quantity-selector">
+                    <button type="button" id="qty-minus" aria-label="Diminuer la quantité">-</button>
+                    <span id="qty-value">1</span>
+                    <button type="button" id="qty-plus" aria-label="Augmenter la quantité">+</button>
+                </div>
+                <button type="button" id="add-to-cart" class="btn-primary">Ajouter au panier</button>
+            </div>
+
+            <!-- Réassurance CRO -->
+            <ul class="product__reassurance">
+                <li>✓ Expédition sous 24h en France</li>
+                <li>✓ Retours gratuits pendant 30 jours</li>
+                <li>✓ Garantie à vie sur la cuve inox</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Tiroir Panier (caché par défaut) -->
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+        <div class="cart-drawer__header">
+            <h2>Votre panier</h2>
+            <button type="button" id="cart-close" aria-label="Fermer le panier">✕</button>
+        </div>
+        <div id="cart-items" class="cart-drawer__items">
+            <p class="cart-empty">Votre panier est vide.</p>
+        </div>
+        <div class="cart-drawer__footer">
+            <p>Sous-total : <strong id="cart-subtotal">0,00 €</strong></p>
+            <button type="button" class="btn-primary btn-full">Commander</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
