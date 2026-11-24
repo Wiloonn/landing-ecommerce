@@ -7,18 +7,37 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    width: 100px;
 }
 
 .header__nav ul {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+.header__nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.header__nav a:hover {
+    transform: translateY(-4px);
+}
+
 .product {
     display: grid;
+    gap: 2rem;
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
 }
@@ -45,6 +64,7 @@ img {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    padding: 1rem;
 }
 
 .cart-drawer.is-open {
